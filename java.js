@@ -1,15 +1,31 @@
-let keyboard = document.querySelector(".keyboard");
-let digitcolumn = document.querySelector(".digitcolumn");
+const keyboard = document.querySelector(".keyboard");
+const digitcolumn = document.querySelector(".digitcolumn");
+const buttonclear = document.querySelector(".clear")
+let screencontent = document.querySelector(".screencontent")
+const buttons = document.querySelectorAll('.digit-btn');
+const opbuttons = document.querySelectorAll('.operator-btn');
 
-for(i=0;i<=8;i++) {
-    let array = [1,2,3,4,5,6,7,8,9]
-    let bton = document.createElement("button")
-    bton.textContent = array[i]
-    digitcolumn.appendChild(bton);
-}
+buttons.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        screencontent.textContent+=btn.value;
+        digitPressed = true;
+    });
+});
+
+opbuttons.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        screencontent.textContent+=btn.textContent;
+        operatorPressed = true;
+    });
+});
 
 
+let digitPressed = false;
+let operatorPressed = false;
+let screenarray = []
 
+while (digitPressed && !operatorPressed) {
+    screenarray
 
 
 const addition = function(a, b) {
@@ -50,8 +66,8 @@ const operate = function(num1,operator,num2) {
     }
 }
 
+buttonclear.addEventListener("click", () => {
+    screencontent.textContent=""
+    screenarray=[]
+});
 
-console.log(addition(2,3))
-console.log(substract(3,3))
-console.log(multiply(2,3))
-console.log(divide(2,2))

@@ -7,16 +7,17 @@ button {
 .container {
     display: flex;
     flex-direction: column;
-    margin: 16px 32px;
+    margin: 16px 24px;
     align-items: center;
     justify-content: center;
+    width: 230px;
 }
 
 .screen {
     display: flex;
     border: 1px black;
-    margin: 16px 12px;
-    padding: 8px 32px;
+    margin: 16px 8px;
+    padding: 8px 28px;
     background-color: gray;
 }
 
@@ -28,10 +29,17 @@ button {
 .digitcolumn {
     display:flex;
     flex-wrap: wrap;
-    width: 170px;
+    width: 200px;
 
 }
 
 .keyboard {
     display: flex;
 }
+
+.screecontent {
+    display: flex;
+    width: 120px;
+    margin: 4px 12px;
+}
+
