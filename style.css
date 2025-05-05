@@ -7,18 +7,27 @@ button {
 .container {
     display: flex;
     flex-direction: column;
-    margin: 16px 24px;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
     width: 230px;
+    row-gap: 30px;
+    background-color: rgb(114, 9, 9);
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.screencontent {
+    display: flex;
+    margin: 4px 8px;
 }
 
 .screen {
     display: flex;
-    border: 1px black;
-    margin: 16px 8px;
-    padding: 8px 28px;
-    background-color: gray;
+    column-gap: 50px;
+    align-items: center;
+    background-color: beige;
+    border: 1px solid black;
 }
 
 .operatorcolumn {
@@ -43,3 +52,9 @@ button {
     margin: 4px 12px;
 }
 
+
+.clear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
